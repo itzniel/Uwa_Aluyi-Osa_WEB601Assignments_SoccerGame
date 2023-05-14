@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ContentList } from '../helper-files/content-list';
 
 @Component({
   selector: 'app-content-card',
@@ -6,5 +7,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./content-card.component.scss']
 })
 export class ContentCardComponent {
+
 
 }

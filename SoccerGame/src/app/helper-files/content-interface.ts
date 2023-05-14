@@ -7,4 +7,4 @@ interface Content {
     type?: string;
     tags?: string[];
   }
-  
+  export { Content };
