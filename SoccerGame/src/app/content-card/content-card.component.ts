@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ContentList } from '../helper-files/content-list';
+
 
 @Component({
   selector: 'app-content-card',
@@ -8,7 +8,7 @@ import { ContentList } from '../helper-files/content-list';
 })
 export class ContentCardComponent {
 
- contents: ContentList;
+ /*contents: ContentList;
  
  constructor(){
 
@@ -47,5 +47,5 @@ const content3 = {
 this.contents.addContent(content1);
 this.contents.addContent(content2);
 this.contents.addContent(content3);
-}
+}*/
 }
