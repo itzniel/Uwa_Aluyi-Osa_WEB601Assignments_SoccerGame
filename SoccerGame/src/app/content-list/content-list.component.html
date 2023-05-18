@@ -1,0 +1,6 @@
+<p>content-list works!</p>
+<h1 style="background-color: rgba(158, 203, 100, 0.755);">Soccer Teams</h1>
+<div *ngFor="let content of contentList">
+    <div [innerHTML]="getHtmlContent(content.id -1)"></div>
+  </div>
+  <hr>
