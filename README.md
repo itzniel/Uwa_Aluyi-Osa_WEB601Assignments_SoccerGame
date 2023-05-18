@@ -33,3 +33,12 @@ Added a condition to check if the index is valid
 @1344
 Deleted/Commented out the ContentList class implementation from the Content-card code, and
 deletef the content-list.ts helper file.
+
+@1350
+Created a new component with  npm run generatecomponent   called content-list
+
+@1420
+Cleared the commented content in Content-card component.ts 
+Added "<app-content-list><></app-content-list>" to the app component html to display content-list contents
+Created an array of 3 items in the content-list.component.ts and created a function to return view of the html content
+in the content-list html created a loop to display the contents
