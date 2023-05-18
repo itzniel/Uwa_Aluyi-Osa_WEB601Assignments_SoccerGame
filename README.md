@@ -28,3 +28,8 @@ Displayed the content in the content-card component's html , Added the content-c
 
 @1220
 Added a condition to check if the index is valid
+
+2023-05-18
+@1344
+Deleted/Commented out the ContentList class implementation from the Content-card code, and
+deletef the content-list.ts helper file.
