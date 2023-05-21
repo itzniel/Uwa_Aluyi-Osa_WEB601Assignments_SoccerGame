@@ -1,13 +1,16 @@
-import { Component } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Content } from '../helper-files/content-interface';
+
 
 @Component({
   selector: 'app-content-list',
   templateUrl: './content-list.component.html',
   styleUrls: ['./content-list.component.scss']
 })
-export class ContentListComponent {
+export class ContentListComponent implements OnInit {
   
-   contentList  = [
+  
+ contentList:Content[]  = [
     {
    id: 1,
    title: 'Manchester United',
@@ -36,23 +39,49 @@ export class ContentListComponent {
    imgURL: 'assets/imgs/Brazil.png',
    type: 'National Team',
    tags: ['FIFA World Cup, Copa America, Neymar Jr.']
- }]
+ },
+ {
+  id: 4,
+  title: 'Liverpool',
+  description: 'An English professional football club based in Liverpool, England.',
+  creator: 'Unknown',
+  imgURL: 'assets/imgs/liverpool.png',
+  type: 'Club',
+  tags: ['Football', 'Premier League', 'England']
+},
+{
+  id: 5,
+  title: 'Bayern Munich',
+  description: 'A German professional football club based in Munich, Germany.',
+  creator: 'Unknown',
+  imgURL: 'assets/imgs/bayern.jpg',
+  type: 'Club',
+  tags: ['Football', 'Bundesliga', 'Germany']
+},
+{
+  id: 6,
+  title: 'Juventus',
+  description: 'An Italian professional football club based in Turin, Italy.',
+  creator: 'Unknown',
+  imgURL: 'assets/imgs/juventus.png',
+  type: 'Club',
+  tags: ['Football', 'Serie A', 'Italy']
+},
+{
+  id: 7,
+  title: 'Paris Saint-Germain',
+  description: 'A French professional football club based in Paris, France.',
+  creator: 'Unknown',
+  imgURL: 'assets/imgs/psg.png',
+  type: 'Club',
+  tags: ['Football', 'Ligue 1', 'France']
+},
 
-  getHtmlContent(index: number): string {
-    const content = this.contentList[index];
-    if (index < 0 || index >= this.contentList.length) {
-      return `<div><p>Index is Invalid ${index}. Enter a valid index.</p></div>`;
-    }
-    const htmlContent = `
-      <div>
-        <h2>${content.title}</h2>
-        <p>${content.description}</p>
-        <p>Creator: ${content.creator}</p>
-        ${content.imgURL ? `<img src="${content.imgURL}" alt="${content.title}" />` : ""}
-       <p> ${content.type ? `Type: ${content.type}</p>` : ""}
-      </div>
-    `;
-    return htmlContent;
-  }
+]
+
+ngOnInit(){
+  
+}
+
 }
 

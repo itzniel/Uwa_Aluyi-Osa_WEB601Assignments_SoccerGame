@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Content } from '../helper-files/content-interface';
 
 
 @Component({
@@ -6,6 +7,13 @@ import { Component } from '@angular/core';
   templateUrl: './content-card.component.html',
   styleUrls: ['./content-card.component.scss']
 })
-export class ContentCardComponent {
-
+export class ContentCardComponent implements OnInit{
+  clickEvent(){
+      console.log(this.content.id, this.content.title)
+  }
+ @Input() content : Content;
+ ngOnInit(){ 
+ 
+ }
+ 
 }

@@ -42,3 +42,6 @@ Cleared the commented content in Content-card component.ts
 Added "<app-content-list><></app-content-list>" to the app component html to display content-list contents
 Created an array of 3 items in the content-list.component.ts and created a function to return view of the html content
 in the content-list html created a loop to display the contents
+
+2023-05-20
+Added new content, made changes to the content-list html, added a click event and made changes to the content-card component, added styling to the content-card.scss, added a condition to not display tag, type and image if value is not set, displayed deleted unnecesary html content and added   "strictPropertyInitialization": false" to the tsconfig.json 
