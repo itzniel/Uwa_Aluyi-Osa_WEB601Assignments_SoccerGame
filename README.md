@@ -50,3 +50,4 @@ Added new content, made changes to the content-list html, added a click event an
 @1700
 Changed the package.json to "0.0.3"
 Updated the type in the array contents
+Created a pipe to filter the array, using "ng generate pipe" in the terminal
