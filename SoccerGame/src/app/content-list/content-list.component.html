@@ -1,5 +1,5 @@
 
 <h1 style="background-color: rgba(158, 203, 100, 0.755);">Soccer Teams</h1>
 
-<app-content-card *ngFor="let item of contentList.slice(0,5); let first = first" [content]="item" [class.first-item]="first" > 
-  </app-content-card>
+<app-content-card *ngFor="let item of contentList.slice(0,5); let first = first" [content]="item" [first]="first" [class.first-item] = "'first'"> 
+</app-content-card>

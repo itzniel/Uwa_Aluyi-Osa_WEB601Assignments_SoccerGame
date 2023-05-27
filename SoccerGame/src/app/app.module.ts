@@ -9,9 +9,11 @@ import { ContentListComponent } from './content-list/content-list.component';
   declarations: [
     AppComponent,
     ContentCardComponent,
-    ContentListComponent
+    ContentListComponent,
+    
   ],
   imports: [
+    
     BrowserModule
   ],
   providers: [],
