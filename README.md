@@ -45,3 +45,8 @@ in the content-list html created a loop to display the contents
 
 2023-05-20
 Added new content, made changes to the content-list html, added a click event and made changes to the content-card component, added styling to the content-card.scss, added a condition to not display tag, type and image if value is not set, displayed deleted unnecesary html content and added   "strictPropertyInitialization": false" to the tsconfig.json 
+
+20230527
+@1700
+Changed the package.json to "0.0.3"
+Updated the type in the array contents
