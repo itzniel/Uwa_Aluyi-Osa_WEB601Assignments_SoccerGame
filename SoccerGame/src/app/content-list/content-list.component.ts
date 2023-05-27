@@ -17,7 +17,7 @@ export class ContentListComponent implements OnInit {
    description: 'An English professional football club based in Manchester, England.',
    creator:' Newton Heath LYR Football Club',
    imgURL: 'assets/imgs/Man.png',
-   type: 'Club',
+   type: '',
    tags: ['Premier League, Champions League, Cristiano Ronaldo',]
  },
  
@@ -27,7 +27,7 @@ export class ContentListComponent implements OnInit {
    description: 'A Spanish professional football club based in Barcelona, Catalonia, Spain.',
    creator: 'Joan Gamper',
    imgURL: 'assets/imgs/barca.png',
-   type: 'Club',
+   type: '',
    tags: ['La Liga, Champions League, Lionel Messi']
  },
  
@@ -37,7 +37,7 @@ export class ContentListComponent implements OnInit {
    description: "The men's national football team of Brazil representing the country in international men's football.",
    creator: 'Brazil Football Confederation',
    imgURL: 'assets/imgs/Brazil.png',
-   type: 'National Team',
+   type: 'Cup',
    tags: ['FIFA World Cup, Copa America, Neymar Jr.']
  },
  {
@@ -46,7 +46,7 @@ export class ContentListComponent implements OnInit {
   description: 'An English professional football club based in Liverpool, England.',
   creator: 'Unknown',
   imgURL: 'assets/imgs/liverpool.png',
-  type: 'Club',
+  type: 'League',
   tags: ['Football', 'Premier League', 'England']
 },
 {
@@ -55,7 +55,7 @@ export class ContentListComponent implements OnInit {
   description: 'A German professional football club based in Munich, Germany.',
   creator: 'Unknown',
   imgURL: 'assets/imgs/bayern.jpg',
-  type: 'Club',
+  type: 'Cup',
   tags: ['Football', 'Bundesliga', 'Germany']
 },
 {
@@ -64,7 +64,7 @@ export class ContentListComponent implements OnInit {
   description: 'An Italian professional football club based in Turin, Italy.',
   creator: 'Unknown',
   imgURL: 'assets/imgs/juventus.png',
-  type: 'Club',
+  type: 'League',
   tags: ['Football', 'Serie A', 'Italy']
 },
 {
@@ -73,7 +73,7 @@ export class ContentListComponent implements OnInit {
   description: 'A French professional football club based in Paris, France.',
   creator: 'Unknown',
   imgURL: 'assets/imgs/psg.png',
-  type: 'Club',
+  type: 'League',
   tags: ['Football', 'Ligue 1', 'France']
 },
 
