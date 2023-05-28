@@ -51,3 +51,10 @@ Added new content, made changes to the content-list html, added a click event an
 Changed the package.json to "0.0.3"
 Updated the type in the array contents
 Created a pipe to filter the array, using "ng generate pipe" in the terminal
+Upddated the content-filter.pipe.ts to filter contents in the array by its 'type'
+Updated the content-card html to display the contents by their types
+Updated the content-card css
+Updated the content-list.html to display the three types of content and updated the content-list.scss to style the 3 content differently
+
+Updated the content-list.component.ts to search if 'title exists'
+Updated the app.module.ts by adding the formModule to handle forms

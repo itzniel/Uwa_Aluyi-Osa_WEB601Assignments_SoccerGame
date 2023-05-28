@@ -1,5 +1,24 @@
 
 <h1 style="background-color: rgba(158, 203, 100, 0.755);">Soccer Teams</h1>
-
-<app-content-card *ngFor="let item of contentList.slice(0,5); let first = first" [content]="item" [first]="first" [class.first-item] = "'first'"> 
+<div id="filter">
+<input [(ngModel)]="findTitle"><button (click)="findContent()">Search</button>
+<br>
+{{message}}
+</div>
+<div id="none">
+<h1>No Type</h1>
+<app-content-card class="none" *ngFor="let item of (contentList | contentFilter :'' )" [content]="item"  >
 </app-content-card>
+</div>
+
+<div  id ="Cup" >
+<h1>Cup Type</h1>
+<app-content-card  *ngFor="let item of (contentList | contentFilter :'Cup' )" [content]="item" >
+</app-content-card>
+</div>
+
+<div id ="League">
+<h1>League Type</h1>
+<app-content-card  *ngFor="let item of (contentList | contentFilter :'League' )" [content]="item">
+</app-content-card>
+</div>

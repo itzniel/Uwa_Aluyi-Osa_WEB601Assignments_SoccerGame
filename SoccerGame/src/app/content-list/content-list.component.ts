@@ -9,7 +9,10 @@ import { Content } from '../helper-files/content-interface';
 })
 export class ContentListComponent implements OnInit {
   
-  
+  findTitle : string ='';
+  filterResult: boolean = false;
+  message :string =''
+
  contentList:Content[]  = [
     {
    id: 1,
@@ -79,6 +82,15 @@ export class ContentListComponent implements OnInit {
 
 ]
 
+findContent() {
+  this.filterResult = this.contentList.some(content => content.title === this.findTitle);
+
+  if (this.filterResult) {
+    this.message = 'title exists.';
+  } else {
+    this.message = ' title does not exist.';
+  }
+}
 ngOnInit(){
   
 }
