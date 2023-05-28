@@ -58,3 +58,7 @@ Updated the content-list.html to display the three types of content and updated 
 
 Updated the content-list.component.ts to search if 'title exists'
 Updated the app.module.ts by adding the formModule to handle forms
+
+20230528
+Added a condition to higlight searched content in content-list.html
+Updated the content-list.scss to perform the highlighting
