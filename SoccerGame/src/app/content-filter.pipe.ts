@@ -8,7 +8,6 @@ export class ContentFilterPipe implements PipeTransform {
 
   transform(contentList: Content[], type: string) {
     
-   
     return  contentList.filter(c => c.type === type ) ;
  
 }

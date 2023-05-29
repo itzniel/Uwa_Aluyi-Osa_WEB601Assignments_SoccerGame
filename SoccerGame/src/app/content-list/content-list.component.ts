@@ -9,9 +9,7 @@ import { Content } from '../helper-files/content-interface';
 })
 export class ContentListComponent implements OnInit {
   
-  findTitle : string ='';
-  filterResult: boolean = false;
-  message :string =''
+ 
 
  contentList:Content[]  = [
     {
@@ -81,9 +79,12 @@ export class ContentListComponent implements OnInit {
 },
 
 ]
+findTitle : string ='';
+filterResult: boolean = false;
+message :string =''
 
 findContent() {
-  this.filterResult = this.contentList.some(content => content.title === this.findTitle);
+  this.filterResult = this.contentList.some(content => content.title.toLowerCase() === this.findTitle.toLowerCase());
 
   if (this.filterResult) {
     this.message = 'title exists.';
