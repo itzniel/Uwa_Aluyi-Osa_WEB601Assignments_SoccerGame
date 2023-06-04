@@ -13,6 +13,7 @@ export class ContentCardComponent implements OnInit{
   }
  @Input() content : Content;
  @Input() first: boolean
+
  ngOnInit(){ 
  
  }

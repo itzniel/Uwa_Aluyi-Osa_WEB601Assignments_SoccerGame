@@ -13,7 +13,7 @@
 
 <div id ="Cup" >
 <h1>Cup Type</h1>
-<app-content-card  *ngFor="let item of (contentList | contentFilter :'Cup' )" [content]="item" [ngClass]="{'highlight': item.title.toLowerCase() === findTitle.toLowerCase() && filterResult}" >
+<app-content-card  *ngFor="let item of (contentList | contentFilter :'Cup')" [content]="item" [ngClass]="{'highlight': item.title.toLowerCase() === findTitle.toLowerCase() && filterResult}" >
 </app-content-card>
 </div>
 

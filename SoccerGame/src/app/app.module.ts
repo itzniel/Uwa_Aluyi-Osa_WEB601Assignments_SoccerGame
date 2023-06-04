@@ -7,7 +7,8 @@ import { ContentCardComponent } from './content-card/content-card.component';
 import { ContentListComponent } from './content-list/content-list.component';
 import { ContentFilterPipe } from './content-filter.pipe';
 import { FormsModule } from '@angular/forms';
-import { DefaultImgPipe } from './default-img.pipe';
+import { HoverAffectDirective } from './hover-affect.directive';
+
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { DefaultImgPipe } from './default-img.pipe';
     ContentCardComponent,
     ContentListComponent,
     ContentFilterPipe,
-    DefaultImgPipe,
+    HoverAffectDirective,
+
     
   ],
   imports: [

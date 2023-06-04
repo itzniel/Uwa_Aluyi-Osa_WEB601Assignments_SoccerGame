@@ -64,7 +64,7 @@ export class ContentListComponent implements OnInit {
   title: 'Juventus',
   description: 'An Italian professional football club based in Turin, Italy.',
   creator: 'Unknown',
-  imgURL: 'assets/imgs/juventus.png',
+  imgURL: '',
   type: 'League',
   tags: ['Football', 'Serie A', 'Italy']
 },
