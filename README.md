@@ -62,3 +62,7 @@ Updated the app.module.ts by adding the formModule to handle forms
 20230528
 Added a condition to higlight searched content in content-list.html
 Updated the content-list.scss to perform the highlighting
+
+20230506
+@1600 Deleted the pipe created and used and ngIf condition in the content-card.html to set  a default image
+Generated a directive called Hover-Affect
