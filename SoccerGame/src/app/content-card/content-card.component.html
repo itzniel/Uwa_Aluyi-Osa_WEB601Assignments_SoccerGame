@@ -1,14 +1,15 @@
-<div class="content" *ngIf ="content.type ==='Cup' || content.type === 'League' || content.type ===''"  [ngStyle]="{'margin': '30px '  }">
+<div  appHoverAffect [affectType]="'border'"  *ngIf ="content.type ==='Cup' || content.type === 'League' || content.type ===''"  [ngStyle]="{'margin': '30px '  }">
 
-<div  >
+<div >
         <h2>{{content.title}}</h2>
         <p>{{content.description}}</p>
         <p>Creator: {{content.creator}}</p>
         <img  *ngIf="content.imgURL; else defaultImage" (click)="clickEvent()" src='{{content.imgURL}}'>
-        <p *ngIf="content.type" > Type: {{content.type}}</p>
-        <p *ngIf="content.tags && content.tags.length > 0"> Tag: {{content.tags}}</p>
+        <p  *ngIf="content.type" appHoverAffect [affectType]="'underline'"  > Type: {{content.type}}</p>
+        <p *ngIf="content.tags && content.tags.length > 0"  appHoverAffect="'content.tags'"  [affectType]="'bold'"  > Tag: {{content.tags}}</p>
 </div>
 </div>
+
 <ng-template #defaultImage>
         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVrBmcs45zapZtbXk8B1uwJF_qVO90pZ41IP7ruemHglOz5MM-BhF4M_AVCOSzhfDoPUU&usqp=CAU" >
  </ng-template>

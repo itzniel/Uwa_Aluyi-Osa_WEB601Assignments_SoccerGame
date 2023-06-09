@@ -2,6 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { Content } from '../helper-files/content-interface';
 
 
+
 @Component({
   selector: 'app-content-card',
   templateUrl: './content-card.component.html',
@@ -12,7 +13,9 @@ export class ContentCardComponent implements OnInit{
       console.log(this.content.id, this.content.title)
   }
  @Input() content : Content;
- @Input() first: boolean
+ @Input() isFirstOrLast: boolean;
+ @Input() tag : Content['tags']
+
 
  ngOnInit(){ 
  

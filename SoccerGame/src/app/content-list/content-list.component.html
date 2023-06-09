@@ -5,9 +5,9 @@
 <br>
 <h1>{{message}}</h1>
 </div>
-<div id="none">
+<div  id="none" >
 <h1>No Type</h1>
-<app-content-card class="none" *ngFor="let item of (contentList | contentFilter :'' )" [content]="item"  [ngClass]="{'highlight': item.title.toLowerCase() === findTitle.toLowerCase() && filterResult}" >
+<app-content-card   class="none" *ngFor="let item of (contentList | contentFilter :'' )" [content]="item"  [ngClass]="{'highlight': item.title.toLowerCase() === findTitle.toLowerCase() && filterResult}" >
 </app-content-card>
 </div>
 
@@ -19,6 +19,6 @@
 
 <div id ="League">
 <h1>League Type</h1>
-<app-content-card  *ngFor="let item of (contentList | contentFilter :'League' )" [content]="item" [ngClass]="{'highlight': item.title.toLowerCase() === findTitle.toLowerCase() && filterResult}">
+<app-content-card   *ngFor="let item of (contentList | contentFilter :'League' )" [content]="item" [ngClass]="{'highlight': item.title.toLowerCase() === findTitle.toLowerCase() && filterResult}">
 </app-content-card>
 </div>
