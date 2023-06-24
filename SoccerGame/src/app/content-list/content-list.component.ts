@@ -97,6 +97,7 @@ findContent() {
          console.log("newContent",contentAdded);
          const cloned = {...contentAdded}
          this.contentList.push(cloned);
+         // cloning so the pipe can function on the new added item
          this.contentList = [...this.contentList];
          console.log('contentListArray',this.contentList);
 
