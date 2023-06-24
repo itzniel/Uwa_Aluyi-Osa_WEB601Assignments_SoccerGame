@@ -92,6 +92,15 @@ findContent() {
     this.message = ' title does not exist.';
   }
 }
+  acceptNewContent(contentAdded : Content) {
+         // Add the new content item to the content list
+         console.log("newContent",contentAdded);
+         const cloned = {...contentAdded}
+         this.contentList.push(cloned);
+         this.contentList = [...this.contentList];
+         console.log('contentListArray',this.contentList);
+
+}
 ngOnInit(){
   
 }

@@ -6,7 +6,7 @@
         <p>Creator: {{content.creator}}</p>
         <img  *ngIf="content.imgURL; else defaultImage" (click)="clickEvent()" src='{{content.imgURL}}'>
         <p  *ngIf="content.type" appHoverAffect [affectType]="'underline'"  > Type: {{content.type}}</p>
-        <p *ngIf="content.tags && content.tags.length > 0"  appHoverAffect="'content.tags'"  [affectType]="'bold'"  > Tag: {{content.tags}}</p>
+        <p *ngIf="content.tags && content.tags.length > 0"  appHoverAffect="'*ngFor=let item of content.tags'"  [affectType]="'bold'"  > Tag: {{content.tags}}</p>
 </div>
 </div>
 

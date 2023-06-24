@@ -6,11 +6,11 @@ import { Content } from './helper-files/content-interface';
 })
 export class HoverAffectDirective {
 @Input() affectType: string;
-@Input() tag: Content['tags'];
 @Input() first: boolean;
 
 
   constructor (private elm: ElementRef)  {
+    this.elm = elm;
     }
 
 @HostListener('mouseenter')
@@ -23,9 +23,11 @@ onMouseLeave() {
 this.removeStyle();
 }
 
-addStyle (){if (this.affectType === 'underline') {
+addStyle (){
+  if (this.affectType === 'underline') {
   this.elm.nativeElement.style.textDecoration = 'underline';
 } else if (this.affectType === 'bold') {
+  console.log(this.elm);
   this.elm.nativeElement.style.fontWeight = 'bold';
 }
 else if(this.affectType ==='border'){
@@ -33,7 +35,8 @@ else if(this.affectType ==='border'){
 }
 }
 
-removeStyle(){  if (this.affectType === 'underline') {
+removeStyle(){ 
+   if (this.affectType === 'underline') {
   this.elm.nativeElement.style.textDecoration = 'none';
 } else if (this.affectType === 'bold') {
   this.elm.nativeElement.style.fontWeight = 'normal';
@@ -41,4 +44,8 @@ removeStyle(){  if (this.affectType === 'underline') {
 else if(this.affectType ==='border'){
   this.elm.nativeElement.style.border =  '';
 }}
+public tags(contentList : Content[] ) {
+ let x = contentList;
+ 
+}
 }
