@@ -66,3 +66,6 @@ Updated the content-list.scss to perform the highlighting
 20230506
 @1600 Deleted the pipe created and used and ngIf condition in the content-card.html to set  a default image
 Generated a directive called Hover-Affect
+
+20230625
+CReated a service and added a function that retrieves the array of contents, also a created a contentDB file to host the data 
