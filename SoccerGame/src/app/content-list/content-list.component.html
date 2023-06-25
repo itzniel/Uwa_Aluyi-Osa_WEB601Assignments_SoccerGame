@@ -9,7 +9,7 @@
 
 <div  id="none" >
 <h1>No Type</h1>
-<app-content-card   class="none" *ngFor="let item of (contentList | contentFilter :'' )" [content]="item"  [ngClass]="{'highlight': item.title.toLowerCase() === findTitle.toLowerCase() && filterResult}" >
+<app-content-card   class="none" *ngFor="let item of (contentList | contentFilter :'' )" [content]="item"  [ngClass]="{'highlight': item.title.toLowerCase() === findTitle.toLowerCase() && filterResult} " >
 </app-content-card>
 </div>
 

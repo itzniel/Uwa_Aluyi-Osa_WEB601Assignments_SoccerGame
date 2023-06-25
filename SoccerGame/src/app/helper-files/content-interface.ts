@@ -6,5 +6,7 @@ interface Content {
     imgURL?: string;
     type?: string;
     tags?: string[];
+
+    
   }
   export { Content };
