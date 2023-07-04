@@ -10,8 +10,7 @@ export class ContentFilterPipe implements PipeTransform {
     if (!type) {
       return contentList.filter(c=> !c.type);
     }
-    
     return  contentList.filter(c => c.type === type ) ;
- 
-}
+  }
+  
   }

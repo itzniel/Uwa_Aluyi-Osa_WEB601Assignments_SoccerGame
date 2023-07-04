@@ -15,6 +15,7 @@ export class ContentCardComponent implements OnInit{
  @Input() content : Content;
  @Input() isFirstOrLast: boolean;
  @Input() tag : Content['tags']
+ @Input() item :Content[];
 
 
  ngOnInit(){ 

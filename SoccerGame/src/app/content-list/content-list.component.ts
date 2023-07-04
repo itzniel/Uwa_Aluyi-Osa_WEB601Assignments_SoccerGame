@@ -13,6 +13,8 @@ export class ContentListComponent implements OnInit {
   
  
 contentList: any[];
+item :  Content;
+
 constructor(private soccerService: SoccerServiceService){
 
 } 
@@ -41,12 +43,16 @@ findContent() {
 
 }
 ngOnInit(){
-  this.soccerService.getContent().subscribe((contentList: any[]) =>
+  this.soccerService.getContent().subscribe((contentlist: any[]) =>
   {
-  this.contentList = contentList;
-  
-  
-  
+  this.contentList = contentlist;
+  })
+
+  const id = 3; //choose an ID
+  this.soccerService.getContentById(id).subscribe((singleContent: Content)=>
+  {
+    this.item = singleContent;
+    console.log(this.item)
 })
 }
 }

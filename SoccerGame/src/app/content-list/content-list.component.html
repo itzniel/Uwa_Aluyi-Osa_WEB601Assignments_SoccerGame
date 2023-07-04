@@ -5,11 +5,14 @@
 <br>
 <h1>{{message}}</h1>
 </div>
-<app-create-content (newContent)="acceptNewContent($event)"></app-create-content>
-
+<!--<app-create-content (newContent)="acceptNewContent($event)"></app-create-content>
+-->
+<app-app-messages></app-app-messages>
+<app-content-card class="singlecontent" [ngClass]="{'box-shadow': item}"style="box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);" [content] = "item">
+</app-content-card>
 <div  id="none" >
 <h1>No Type</h1>
-<app-content-card   class="none" *ngFor="let item of (contentList | contentFilter :'' )" [content]="item"  [ngClass]="{'highlight': item.title.toLowerCase() === findTitle.toLowerCase() && filterResult} " >
+<app-content-card  *ngFor="let item of (contentList | contentFilter :'' )" [content]="item"  [ngClass]="{'highlight': item.title.toLowerCase() === findTitle.toLowerCase() && filterResult} " >
 </app-content-card>
 </div>
 

@@ -69,3 +69,6 @@ Generated a directive called Hover-Affect
 
 20230625
 CReated a service and added a function that retrieves the array of contents, also a created a contentDB file to host the data 
+
+20230630
+Created a service to display a new content, and added another service to send a message when the content is retrieved

@@ -1,4 +1,4 @@
-<div  appHoverAffect [affectType]="'border'"  *ngIf ="content.type ==='Cup' || content.type === 'League' || content.type ===''"  [ngStyle]="{'margin': '30px '  }">
+<div  appHoverAffect [affectType]="'border'"  *ngIf ="content.type ==='Cup' || content.type === 'League' || content.type ==='' "  [ngStyle]="{'margin': '30px '  }">
 
 <div >
         <h2>{{content.title}}</h2>
@@ -13,4 +13,3 @@
 <ng-template #defaultImage>
         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVrBmcs45zapZtbXk8B1uwJF_qVO90pZ41IP7ruemHglOz5MM-BhF4M_AVCOSzhfDoPUU&usqp=CAU" >
  </ng-template>
-    
