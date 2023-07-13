@@ -13,13 +13,15 @@ export class SoccerServiceService {
   getContent() : Observable<any[]>{
     const contentlist = of(contentList);
     this.messageService.add('Content array loaded!')
+    
     return contentlist;
 
 
   }
   getContentById(id : number) : Observable<any>{
-    const singleContent = contentList.find((item)=> item.id === id);
-    return of(singleContent);
+    const singleContent = of(contentList.find((item)=> item.id === id));
+    this.messageService.add('Content Item at id: ' +id)
+    return singleContent;
   }
   
 }

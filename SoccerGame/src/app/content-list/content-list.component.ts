@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Content } from '../helper-files/content-interface';
 import { SoccerServiceService } from '../services/soccer-service.service';
-
+import { MessageService } from '../app-message.service';
 
 
 @Component({
@@ -11,11 +11,13 @@ import { SoccerServiceService } from '../services/soccer-service.service';
 })
 export class ContentListComponent implements OnInit {
   
- 
-contentList: any[];
-item :  Content;
+  inputId: string;
+contentList: Content[];
+item :  any;
+  
 
-constructor(private soccerService: SoccerServiceService){
+constructor(private soccerService: SoccerServiceService, 
+            public messageService : MessageService ){
 
 } 
  
@@ -42,17 +44,39 @@ findContent() {
          console.log('contentListArray',this.contentList);
 
 }
+fetchContentCard(): void {
+  const id = parseInt(this.inputId);
+  this.messageService.showMessage('');
+  if (isNaN(id)) {
+    this.messageService.showMessage('Invalid ID. Please enter a number.');
+    return;
+  }
+
+  const arrayLength = this.contentList.length;
+console.log(arrayLength);
+  if (id < 0 || id > arrayLength) {
+      this.messageService.showMessage('ID is out of range');
+    return;
+  }
+  this.soccerService.getContentById(id).subscribe((singleContent: Content)=>{
+    this.item = singleContent;
+  console.log(this.item)
+})
+
+}
+
+clearContent() {
+  this.item = [];}
+
+ 
+ 
+
 ngOnInit(){
   this.soccerService.getContent().subscribe((contentlist: any[]) =>
   {
   this.contentList = contentlist;
   })
 
-  const id = 3; //choose an ID
-  this.soccerService.getContentById(id).subscribe((singleContent: Content)=>
-  {
-    this.item = singleContent;
-    console.log(this.item)
-})
+  
 }
 }
