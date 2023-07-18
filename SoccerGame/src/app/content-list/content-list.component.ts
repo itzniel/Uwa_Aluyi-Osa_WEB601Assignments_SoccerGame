@@ -11,7 +11,7 @@ import { MessageService } from '../app-message.service';
 })
 export class ContentListComponent implements OnInit {
   
-  inputId: string;
+inputId: string;
 contentList: Content[];
 item :  any;
   
@@ -34,9 +34,9 @@ findContent() {
     this.message = ' title does not exist.';
   }
 }
-  acceptNewContent(contentAdded : Content) {
+/*  acceptNewContent(contentAdded : Content) {
          // Add the new content item to the content list
-         console.log("newContent",contentAdded);
+         console.log("newContentItem",contentAdded);
          const cloned = {...contentAdded}
          this.contentList.push(cloned);
          // cloning so the pipe can function on the new added item
@@ -44,6 +44,7 @@ findContent() {
          console.log('contentListArray',this.contentList);
 
 }
+*/
 fetchContentCard(): void {
   const id = parseInt(this.inputId);
   this.messageService.showMessage('');
@@ -65,6 +66,7 @@ console.log(arrayLength);
 
 }
 
+
 clearContent() {
   this.item = [];}
 
@@ -72,11 +74,20 @@ clearContent() {
  
 
 ngOnInit(){
-  this.soccerService.getContent().subscribe((contentlist: any[]) =>
+  this.soccerService.getContent().subscribe((contentlist) =>
   {
-  this.contentList = contentlist;
+  return (this.contentList = [...contentlist]);
   })
+}
 
+
+  addContentToList(newContentItem: Content){
+		this.soccerService.addContent(newContentItem).subscribe((newContentFromServer) => {
+      this.contentList = [...this.contentList, newContentFromServer];
+      console.log(this.contentList);
+    }
+    );
+		}
+	}
   
-}
-}
+

@@ -1,6 +1,7 @@
 <div  appHoverAffect [affectType]="'border'"  *ngIf ="content.type ==='Cup' || content.type === 'League' || content.type ==='' "  [ngStyle]="{'margin': '30px '  }">
 
 <div >
+        <h2>{{content.id}}</h2>
         <h2>{{content.title}}</h2>
         <p>{{content.description}}</p>
         <p>Creator: {{content.creator}}</p>

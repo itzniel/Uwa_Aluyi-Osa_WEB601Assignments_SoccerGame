@@ -2,6 +2,8 @@ import { Injectable } from '@angular/core';
 import { contentList } from '../helper-files/contentDb';
 import { Observable, of } from 'rxjs';
 import { MessageService } from '../app-message.service';
+import { HttpClient, HttpHeaders } from'@angular/common/http';
+import { Content } from '../helper-files/content-interface';
 
 @Injectable({
   providedIn: 'root'
@@ -9,12 +11,19 @@ import { MessageService } from '../app-message.service';
 export class SoccerServiceService {
 
   
-  constructor(private messageService: MessageService) { }
-  getContent() : Observable<any[]>{
-    const contentlist = of(contentList);
+  constructor(private messageService: MessageService,
+             private http:HttpClient) { }
+
+   private httpOptions = {
+              headers: new HttpHeaders({ 'Content-type':
+              'application/json' })
+              };
+              
+  getContent() : Observable<Content[]>{
+   const httpContent = this.http.get<Content[]>("api/content");
     this.messageService.add('Content array loaded!')
     
-    return contentlist;
+    return httpContent
 
 
   }
@@ -24,4 +33,12 @@ export class SoccerServiceService {
     return singleContent;
   }
   
+
+
+    addContent(newContentItem: Content):
+Observable<Content>{
+return this.http.post<Content>("api/content"
+,
+newContentItem, this.httpOptions);
+}
 }

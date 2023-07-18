@@ -28,7 +28,10 @@
     <div *ngFor='let message of messageService.messages'> {{message}} </div>
   
   </div>
+
+  <app-modify-content (addContentEvent)="addContentToList($event)"></app-modify-content>
 <div  id="none" >
+
 <h1>No Type</h1>
 <app-content-card  *ngFor="let item of (contentList | contentFilter :'' )" [content]="item"  [ngClass]="{'highlight': item.title.toLowerCase() === findTitle.toLowerCase() && filterResult} " >
 </app-content-card>
