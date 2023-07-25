@@ -16,7 +16,7 @@ export class ContentCardComponent implements OnInit{
  @Input() isFirstOrLast: boolean;
  @Input() item :Content[];
 
-
+ defaultImage = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVrBmcs45zapZtbXk8B1uwJF_qVO90pZ41IP7ruemHglOz5MM-BhF4M_AVCOSzhfDoPUU&usqp=CAU';
  ngOnInit(){ 
  
  }

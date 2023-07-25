@@ -1,16 +1,21 @@
 <div  appHoverAffect [affectType]="'border'"  *ngIf ="content.type ==='Cup' || content.type === 'League' || content.type ==='' "  [ngStyle]="{'margin': '30px '  }">
 
-<div >
-        <h2>{{content.id}}</h2>
-        <h2>{{content.title}}</h2>
-        <p>{{content.description}}</p>
-        <p>Creator: {{content.creator}}</p>
-        <img  *ngIf="content.imgURL; else defaultImage" (click)="clickEvent()" src='{{content.imgURL}}'>
-        <p  *ngIf="content.type" appHoverAffect [affectType]="'underline'"  > Type: {{content.type}}</p>
-        <p *ngIf="content.tags && content.tags.length > 0"  appHoverAffect="'*ngFor=let item of content.tags'"  [affectType]="'bold'"  > Tag: {{content.tags}}</p>
-</div>
-</div>
-
-<ng-template #defaultImage>
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVrBmcs45zapZtbXk8B1uwJF_qVO90pZ41IP7ruemHglOz5MM-BhF4M_AVCOSzhfDoPUU&usqp=CAU" >
- </ng-template>
+<mat-card class="card">
+        <mat-card-header>
+          <div mat-card-avatar class="example-header-image"></div>
+          <mat-card-subtitle>ID: {{content.id}}</mat-card-subtitle>
+          <mat-card-title>{{content.title}}</mat-card-title>
+          <mat-card-subtitle>Creator: {{content.creator}}</mat-card-subtitle>
+        </mat-card-header>  
+        <img mat-card-image src="{{content?.imgURL == '' ? defaultImage : content?.imgURL}}"
+        alt="Avatar" matTooltip="Photo of {{content?.title}}" matTooltipPosition="above">
+        <mat-card-content>
+                <p>{{content?.description}}</p>
+                <mat-chip-listbox *ngIf="content?.tags">
+                  <mat-chip-option color="accent" *ngFor="let tag of content?.tags" disabled>{{tag}}</mat-chip-option>
+                </mat-chip-listbox>
+              </mat-card-content>
+              <mat-card-actions>
+            
+              </mat-card-actions>
+            </mat-card>

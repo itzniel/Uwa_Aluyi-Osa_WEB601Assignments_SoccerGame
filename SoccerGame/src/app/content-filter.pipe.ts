@@ -8,7 +8,7 @@ export class ContentFilterPipe implements PipeTransform {
 
   transform(contentList: Content[], type?: string): Content[] {
     if (type == null) {
-      return contentList.filter((c)=> c.type == null);
+      return contentList.filter((c)=> c.type == null || c.type == '');
     }
     return  contentList.filter((c) => c.type == type ) ;
   }
