@@ -9,7 +9,6 @@ import { Content } from '../helper-files/content-interface';
 export class ModifyContentComponent {
   @Output() addContentEvent = new EventEmitter<Content>();
 
-<<<<<<< HEAD
 	title: string | null = null;
 	description: string | null = null;
 	creator: string | null = null;
@@ -27,26 +26,6 @@ export class ModifyContentComponent {
 	}
 
   submitContent() {
-=======
-	title: string;
-	description: string;
-	creator: string
-	imgURL: string
-	type: string
-	tags: string;
-
-  clearForm() {
-		this.title = '';
-		this.description = '';
-		this.creator = '';
-		this.imgURL = '';
-		this.type = '';
-		this.tags = '';
-	}
-
-  submitContent() {
-    console.log(this.description)
->>>>>>> assignment8
 		const newContent: any = {
 			title: this.title,
 			description: this.description,
